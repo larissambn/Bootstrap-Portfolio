@@ -503,8 +503,12 @@ progress {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
+}
+
+.a-text {
+  font-size: 1.25rem;
 }
 
 .display-1 {

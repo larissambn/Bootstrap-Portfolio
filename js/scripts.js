@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-const switchTheme = document.getElementById("layer_2");
+const switchTheme = document.getElementById("darkmode");
 
 switchTheme.addEventListener("click", () => {
   document.body.classList.toggle("bg-dark");

@@ -11613,6 +11613,8 @@ html {
 .goog-te-banner-frame.skiptranslate {display: none!important;} 
 body {top: 0px!important;}
 
-
+hr {
+  color: #123455;
+}
 
 

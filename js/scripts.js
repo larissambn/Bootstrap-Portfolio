@@ -1,16 +1,7 @@
-/*!
-* Start Bootstrap - Freelancer v7.0.6 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
-    var navbarShrink = function () {
+    let navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
@@ -52,7 +43,6 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-
 
 const switchTheme = document.getElementById("darkmode");
 
@@ -105,3 +95,23 @@ switchTheme.addEventListener("click", () => {
         }
    }
 
+  $('.carousel').carousel({
+    interval: 2000
+  })
+
+  function InvalidMsg(textbox) {
+
+    document.getElementById("my-div")
+         
+    if (textbox.value === '') {
+        textbox.setCustomValidity
+            ('An email is required');
+    } else if (textbox.validity.typeMismatch) {
+        textbox.setCustomValidity
+            ('Email is not valid');
+    } else {
+        textbox.setCustomValidity('');
+    }
+
+    return true;
+}

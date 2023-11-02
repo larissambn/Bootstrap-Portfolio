@@ -98,3 +98,4 @@ switchTheme.addEventListener("click", () => {
   $('.carousel').carousel({
     interval: 2000
   })
+

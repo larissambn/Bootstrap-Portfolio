@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/cart.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -46,10 +46,13 @@
               </button>
         </div> 
             <div class="position-absolute end-0 m-4 mt-5">
-                <button class="btn btn-outline-light" style="border-radius: 50%;">
                     <i class="fa fa-shopping-cart"></i></button>
+                    <div id="totalCountCart"></div>
+                    <div id="totalPriceCart"></div>
+                <div>
             </div>
         </div>
+    </div>
         <!--  Shop Start-->
 <section class="page-section" id="products-cart">
  <div class="container-fluid product py-5">
@@ -57,9 +60,9 @@
         <div class="tab-class text-center">
             <div class="row g-4">
                 <div class="col-lg-4 text-start">
-                    <h1>Our Tours</h1>
+                    <h1 class="mb-4">Our Tours</h1>
                 </div>
-                <div class="col-lg-8 text-end">
+                <!-- <div class="col-lg-8 text-end">
                     <ul class="nav nav-pills d-inline-flex text-center mb-5">
                         <li class="nav-item">
                             <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
@@ -82,7 +85,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane fade show p-0 active">
@@ -92,129 +95,139 @@
                                 <div class="col-md-6 col-lg-4 col-xl-3">
                                     <div class="rounded position-relative product-item">
                                         <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            <img src="/assets/historical_pics/estação.png" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
                                         </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0 mt-1"> €19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                <p class="text-black fs-5 fw-bold mb-0 mt-2"> €00.00</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-dark mt-2"> Remove </a>                                            </div>
+                                            <h4 class="product-name"> Historical Tour  </h4>
+                                            <p class="mb-1">Walking tour trought the historical spots of Ponta Grossa</p>
+                                                <div>€<span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 19.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4 col-xl-3">
                                     <div class="rounded position-relative product-item">
                                         <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">History</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0">€19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative product-item">
-                                        <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Gastronomy</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0">€19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative product-item">
-                                        <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            <img src="assets/products/tortas.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
                                         </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0">€19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                            </div>
+                                            <h4 class="product-name">Grastronomy Tour </h4>
+                                            <p class="mb-1">Get to know the famous Ponta Grossa and Carambeí tarts</p>
+                                                <div>€<span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 45.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4 col-xl-3">
                                     <div class="rounded position-relative product-item">
                                         <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Nature</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0">€19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative product-item">
-                                        <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Nature</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0">€19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative product-item">
-                                        <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Nature</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0">€19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative product-item">
-                                        <div class="product-img">
-                                            <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            <img src="assets/products/vila_velha.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
                                         </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Lorem Ipsum</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-black fs-5 fw-bold mb-0">€19.99</p>
-                                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                            </div>
+                                            <h4 class="product-name"> Vila Velha Tour</h4>
+                                            <p class="mb-1"> Get to know the biggest park of the city known for its sandstones.
+                                            </p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 29.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/waterfall_tour.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Waterfall Parks</h4>
+                                            <p class="mb-1">Get to know this park perfect for swimming in Waterfalls and hicking  </p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 19.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/night_walk.jpeg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Night walk</h4>
+                                            <!-- <p class="mb-1">With the help of a powerful telescope and under the guidance of our expert guide on the subject, the Night Walk offers visitors a unique view of the sky on New or Full Moon nights. A true immersive journey into the astronomical universe in a privileged spot, the Vila Velha park. -->
+                                            <p class="mb-1"> Night Walk in the New or Full Moon nights at the Vila Velha park.
+                                            </p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 12.00</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/museu.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Museum Tours</h4>
+                                            <p class="mb-1">Ticket for entrance in all the museums in town</p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 24.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/balãodoparque.jpeg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Baloon Tour</h4>
+                                            <p class="mb-1">30 minutes baloon trip trought the whole city</p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 12.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/bikes.png" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Cycle Tour</h4>
+                                            <p class="mb-1">Ciclying and kicking trought the city's outdoors</p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 19.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="tab-2" class="tab-pane fade show p-0">
+                <!-- <div id="tab-2" class="tab-pane fade show p-0">
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
@@ -378,8 +391,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                </div> -->
+                                <!-- <div class="col-md-6 col-lg-4 col-xl-3">
                                     <div class="rounded position-relative product-item">
                                         <div class="product-img">
                                             <img src="assets/staff/george.jpg" class="img-fluid w-100 rounded-top" alt="">
@@ -394,7 +407,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -405,9 +418,9 @@
 </div>
 <!-- Fruits Shop End-->
 <div class="text-center text-black mx-auto mt-1">
-    <a href="./about.html" class="btn btn-xl btn-outline-light">
+    <a href="./cartPage.html" class="btn btn-xl btn-outline-light">
         <i class="fa fa-shopping-cart" style="margin-right: 5px;"></i>
-        View Cart
+        Go to Cart
     </a>
 </div>
 </section>		   
@@ -440,7 +453,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/cart.scripts.js"></script>
+        <script src="js/products.scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

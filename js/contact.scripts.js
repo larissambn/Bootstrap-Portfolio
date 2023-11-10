@@ -51,50 +51,17 @@ switchTheme.addEventListener("click", () => {
 });
 
 
-  let button = document.getElementById("ed-btn");
+function InvalidMsg(textbox) {
 
-  button.onclick = function() {
-      let div = document.getElementById("education");
-      if (div.style.display !== "none") {
-          div.style.display = "none";
+      if (textbox.value === '') {
+          textbox.setCustomValidity
+              ('An email is required');
+      } else if (textbox.validity.typeMismatch) {
+          textbox.setCustomValidity
+              ('Email is not valid');
+      } else {
+          textbox.setCustomValidity('');
       }
-      else {
-          div.style.display = 'block';
-      }
-  };
 
-
-  let workBtn = document.getElementById("work-btn");
-
-  workBtn.onclick = function() {
-      let div = document.getElementById("work");
-      if (div.style.display !== "none") {
-          div.style.display = "none";
-      }
-      else {
-          div.style.display = 'block';
-      }
-  };
-
-
-   function showL() {
-    let x = document.getElementById("languages");
-    if (x.style.display === "block") {
-           x.style.display = "none";
-    } else {
-       x.style.display = "block";
-        }
-   }
-
-   function showS() {
-    let x = document.getElementById("softSkills");
-    if (x.style.display === "block") {
-           x.style.display = "none";
-    } else {
-       x.style.display = "block";
-        }
-   }
-
-  $('.carousel').carousel({
-    interval: 2000
-  })
+      return true;
+  }

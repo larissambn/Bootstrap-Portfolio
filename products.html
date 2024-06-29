@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shopping Cart</title>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-light text-black rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto text-white">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./index.html">Home </a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Products</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./about.html">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./contact.html">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./history.html">History</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead text-black text-center">
+            <div class="container d-flex align-items-center flex-column">                 
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase text-secondary bg-white mb-0" height="80px" width="80px">Ponta Grossa Tourism</h1>
+            </div>                               
+        </header>
+        <div class="d-flex m-3 me-0">
+        <div class="position-absolute start-0 m-4 mt-0">
+            <button id="darkmode" class="mt-4 pb-1 rounded">
+                <?xml version="1.0" ?><svg id="layer_2" width="25" height="25" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M30.8374,17.32389c-0.49902-0.33691-1.1499-0.34082-1.65576-0.0127c-1.69189,1.10156-3.66064,1.68359-5.69336,1.68359  c-5.78076,0-10.48389-4.70313-10.48389-10.4834c0-2.03223,0.58252-4.00098,1.68408-5.69336  c0.32813-0.50488,0.32324-1.15625-0.0127-1.65625c-0.33594-0.49902-0.93457-0.74707-1.5293-0.63477  C5.81836,1.94303,0.5,8.39615,0.5,15.87076c0,8.61816,7.01074,15.62891,15.62842,15.62891  c7.47461,0,13.92773-5.31836,15.34424-12.64746C31.58692,18.26139,31.33692,17.65982,30.8374,17.32389z M16.12842,28.49967  C9.16504,28.49967,3.5,22.83463,3.5,15.87076c0-4.9209,2.85254-9.29395,7.11084-11.36426  c-0.40039,1.28711-0.60645,2.63477-0.60645,4.00488c0,7.43457,6.04883,13.4834,13.48389,13.4834  c1.37012,0,2.71826-0.20605,4.00488-0.60645C25.42334,25.64713,21.04981,28.49967,16.12842,28.49967z"/></svg>
+              </button>
+        </div> 
+            <div class="position-absolute end-0 m-4 mt-5">
+                    <i class="fa fa-shopping-cart"></i></button>
+                    <div id="totalCountCart"></div>
+                    <div id="totalPriceCart"></div>
+                <div>
+            </div>
+        </div>
+    </div>
+        <!--  Shop Start-->
+<section class="page-section" id="products-cart">
+ <div class="container-fluid product py-5">
+    <div class="container py-5">
+        <div class="tab-class text-center">
+            <div class="row g-4">
+                <div class="col-lg-4 text-start">
+                    <h1 class="mb-4">Our Tours</h1>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="/assets/historical_pics/estação.png" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name"> Historical Tour  </h4>
+                                            <p class="mb-1">Walking tour trought the historical spots of Ponta Grossa</p>
+                                                <div>€<span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 19.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/tortas.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Grastronomy Tour </h4>
+                                            <p class="mb-1">Get to know the famous Ponta Grossa and Carambeí tarts</p>
+                                                <div>€<span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 45.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/vila_velha.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name"> Vila Velha Tour</h4>
+                                            <p class="mb-1"> Get to know the biggest park of the city known for its sandstones.
+                                            </p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 29.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/waterfall_tour.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Waterfall Parks</h4>
+                                            <p class="mb-1">Get to know this park perfect for swimming in Waterfalls and hicking  </p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 19.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/night_walk.jpeg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Night walk</h4>
+                                            <!-- <p class="mb-1">With the help of a powerful telescope and under the guidance of our expert guide on the subject, the Night Walk offers visitors a unique view of the sky on New or Full Moon nights. A true immersive journey into the astronomical universe in a privileged spot, the Vila Velha park. -->
+                                            <p class="mb-1"> Night Walk in the New or Full Moon nights at the Vila Velha park.
+                                            </p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 12.00</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/museu.jpg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Museum Tours</h4>
+                                            <p class="mb-1">Ticket for entrance in all the museums in town</p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 24.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/balãodoparque.jpeg" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Baloon Tour</h4>
+                                            <p class="mb-1">30 minutes baloon trip trought the whole city</p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 12.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative product-item">
+                                        <div class="product-img">
+                                            <img src="assets/products/bikes.png" class="img-fluid w-100 rounded-top" style="width:300px;height:400px">
+                                        </div>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tour</div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4 class="product-name">Cycle Tour</h4>
+                                            <p class="mb-1">Ciclying and kicking trought the city's outdoors</p>
+                                                <div>€ <span class="initial-price text-black fs-5 fw-bold mt-0 mb-1"> 19.99</span></div>
+                                                <button class="add-button position-relative end-0 mt-2 text-align-left btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</button>
+                                                <div class="count column text-start mt-3"></div>
+                                                <div class="totalPrice text-black fs-5 fw-bold mb-0 mt-2 column text-start"></div>
+                                                <button class="remove-button btn border border-secondary position-relative end-0 rounded-pill px-3 text-black mt-2" style="display: none;"> Remove </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- Fruits Shop End-->
+<div class="text-center text-black mx-auto mt-1">
+    <a href="./cartPage.html" class="btn btn-xl btn-outline-light">
+        <i class="fa fa-shopping-cart" style="margin-right: 5px;"></i>
+        Go to Cart
+    </a>
+</div>
+</section>		   
+<footer >         
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white-50 footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid gray ;">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#">
+                            <h1 class="text-black mb-0">Ponta Grossa Tourism</h1>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mx-auto">
+                            <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                            <button type="submit" class="btn btn-dark border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="d-flex justify-content-end pt-3">
+                            <a class="btn  btn-outline-dark me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-dark me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-dark me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-dark btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Shop Info</h4>
+                        <a class="btn-link" href="">About Us</a>
+                        <a class="btn-link" href="">Contact Us</a>
+                        <a class="btn-link" href="">Privacy Policy</a>
+                        <a class="btn-link" href="">Terms & Condition</a>
+                        <a class="btn-link" href="">Return Policy</a>
+                        <a class="btn-link" href="">FAQs & Help</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Account</h4>
+                        <a class="btn-link" href="">My Account</a>
+                        <a class="btn-link" href="">Shop details</a>
+                        <a class="btn-link" href="">Shopping Cart</a>
+                        <a class="btn-link" href="">Wishlist</a>
+                        <a class="btn-link" href="">Order History</a>
+                        <a class="btn-link" href="">International Orders</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Contact</h4>
+                        <p>Address: 000 Street, Ponta Grossa - Paraná, Brazil -  00000</p>
+                        <p>Email: Example@gmail.com</p>
+                        <p>Phone: +0123 4567 8910</p>
+                        <p>Payment Accepted</p>
+                        <img src="assets/footer/payment.png" class="img-fluid" alt="payment"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/products.scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

@@ -11434,6 +11434,7 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
+  background-image: url(../assets/products/catedral_santanna.jpg);
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
